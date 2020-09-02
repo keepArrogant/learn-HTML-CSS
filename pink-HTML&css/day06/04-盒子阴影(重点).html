@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子阴影(重点)</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100 auto;
+            /* 水平阴影和垂直阴影的位置必须写 */
+            /* box-shadow: 10px 10px; */
+        }
+
+        div:hover {
+            /* 原先盒子没有阴影，当我们鼠标经过盒子就添加阴影效果 */
+            box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+
+        }
+
+        h4,
+        p {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <br>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>值</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>h-shadow</td>
+            <td>必需。水平阴影的位置。允许负数，就是在盒子位置水平移动</td>
+        </tr>
+        <tr>
+            <td>v-shadow</td>
+            <td>必需。垂直阴影的位置。允许负值。就是在盒子位置垂直移动</td>
+        </tr>
+        <tr>
+            <td>blur</td>
+            <td>可选。模糊距离。数值越大阴影越模糊</td>
+        </tr>
+        <tr>
+            <td>spread</td>
+            <td>可选。阴影的尺寸。就是阴影的大小</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>可选。阴影的颜色</td>
+        </tr>
+        <tr>
+            <td>inset</td>
+            <td>可选。将外部阴影(outset)改为内部阴影(inset)。默认为外部阴影</td>
+        </tr>
+    </table>
+    <h4>注意：</h4>
+    <p>1.默认的是外阴影(outset)，但是不可以写这个单词，否则导致阴影无效</p>
+    <p>2.盒子阴影不占用空间，不会影响其他盒子排列</p>
+</body>
+
+</html>

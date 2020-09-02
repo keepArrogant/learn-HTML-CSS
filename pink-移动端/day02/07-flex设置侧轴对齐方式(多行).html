@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex设置侧轴对齐方式(多行)</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            /* 默认是不换行的，现在让它换行 */
+            flex-wrap: wrap;
+            /* 因为有了换行，此时我们侧轴上控制子元素的对齐方式我们用 align-content */
+            /* 从前往后依次排列 */
+            /* align-content: flex-start; */
+            /* 从后往前依次排列 */
+            /* align-content: flex-end; */
+            /* 居中对齐，不过现在是多行一起居中对齐了 */
+            /* align-content: center; */
+            /* 剩余空间分配同样的距离依次排开 */
+            /* align-content: space-around; */
+            /* 多行两边紧贴墙壁，剩余空间在中间 */
+            /* align-content: space-between; */
+            /* 设置子项元素高度平分父元素高度 */
+            align-content: stretch;
+        }
+
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            color: #fff;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+    </div>
+    <hr>
+    <br>
+    <h4>align-content 设置侧轴上的子元素的排列方式(多行)</h4>
+    <p>设置子项在侧轴上的排列方式 并且只能用于子项出现换行的情况(多行),在单行下是没有效果的。</p>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性值</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>flex-start</td>
+            <td>默认值在侧轴的头部开始排列</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>在侧轴的尾部开始排列</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>在侧轴中间显示</td>
+        </tr>
+        <tr>
+            <td>space-around</td>
+            <td>子项在侧轴平分剩余空间</td>
+        </tr>
+        <tr>
+            <td>space-between</td>
+            <td>子项在侧轴先分布在两头，再平分剩余空间</td>
+        </tr>
+        <tr>
+            <td>stretch</td>
+            <td>设置子项元素高度平分父元素高度</td>
+        </tr>
+    </table>
+    <hr>
+    <br>
+    <h4>align-content 和align-items区别</h4>
+    <ul>
+        <li>align-items适用于单行情况下，只有上对齐、下对齐、居中和拉伸</li>
+        <li>align-content适应于换行(多行)的情况下(单行情况下无效),可以设置上对齐、下对齐、居中、拉伸以及平均分配剩余空间等属性值。</li>
+        <li>总结就是单行找align-items 多行找 align-content</li>
+    </ul>
+</body>
+
+</html>

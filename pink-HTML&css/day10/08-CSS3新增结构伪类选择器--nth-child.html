@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增结构伪类选择器--nth-child.html</title>
+    <style>
+        /* 1.把所有的偶数 even的孩子选出来 */
+        ul li:nth-child(even) {
+            background-color: skyblue;
+        }
+
+        /* 2.把所有的奇数 odd的孩子选出来 */
+        ul li:nth-child(odd) {
+            background-color: pink;
+        }
+
+        /* 3.nth-child(n)从0开始 每次加1 往后面计算 这里面必须是n 不能是其他的字母 选择了所有的孩子 */
+        /* ol li:nth-child(n) {
+            background-color: springgreen;
+        } */
+        /* 4.等价于even 选出偶数 */
+        /* ol li:nth-child(2n) {
+            background-color: springgreen;
+        } */
+        /* 5.等价于odd 选出奇数 */
+        /* ol li:nth-child(2n+1) {
+            background-color: springgreen;
+        } */
+        /* 6.n从0开始 那么 5n选的是第5、10、15 */
+        /* ol li:nth-child(5n) {
+            background-color: springgreen;
+        } */
+        /* 7.从第5个开始(包含第五个)直到最后 */
+        /* ol li:nth-child(n+5) {
+            background-color: springgreen;
+        } */
+
+        /* 8.前五个，包含第五个 0+5=5 -1+5=4 -2+5=3 */
+        ol li:nth-child(-n+5) {
+            background-color: springgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第一个孩子</li>
+        <li>我是第二个孩子</li>
+        <li>我是第三个孩子</li>
+        <li>我是第四个孩子</li>
+        <li>我是第五个孩子</li>
+        <li>我是第六个孩子</li>
+        <li>我是第七个孩子</li>
+    </ul>
+    <ol>
+        <li>我是第一个孩子</li>
+        <li>我是第二个孩子</li>
+        <li>我是第三个孩子</li>
+        <li>我是第四个孩子</li>
+        <li>我是第五个孩子</li>
+        <li>我是第六个孩子</li>
+        <li>我是第七个孩子</li>
+        <li>我是第八个孩子</li>
+        <li>我是第九个孩子</li>
+        <li>我是第十个孩子</li>
+        <li>我是第十一个孩子</li>
+        <li>我是第十二孩子</li>
+        <li>我是第十三孩子</li>
+        <li>我是第十四孩子</li>
+        <li>我是第十五孩子</li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增音频标签</title>
+</head>
+
+<body>
+    <audio src="images/kris.mp3" autoplay="autoplay" controls="controls" loop="loop"></audio>
+    <h4>音频 audio </h4>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性</th>
+            <th>值</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>autoplay</td>
+            <td>autoplay</td>
+            <td>如果出现该属性，则音频在就绪后马上播放。</td>
+        </tr>
+        <tr>
+            <td>controls</td>
+            <td>controls</td>
+            <td>如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+        </tr>
+        <tr>
+            <td>loop</td>
+            <td>loop</td>
+            <td>如果出现该属性，则每当音频结束时重新开始播放。</td>
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>url</td>
+            <td>要播放的音频URL</td>
+        </tr>
+    </table>
+    <h4>多媒体标签总结</h4>
+    <ul>
+        <li>音频标签和视频标签使用方法基本一致</li>
+        <li>浏览器支持情况不同</li>
+        <li>谷歌浏览器把音频和视频自动播放禁止了</li>
+        <li>我们可以给视频标签添加muted属性来静音播放视频，音频不可以(可以通过JavaScript解决)</li>
+        <li>视频标签是重点，我们经常设置自动播放，不适用controls控件，循环和设置大小属性</li>
+    </ul>
+</body>
+
+</html>

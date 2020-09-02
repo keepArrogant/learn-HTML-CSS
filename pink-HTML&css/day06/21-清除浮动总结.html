@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动总结</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>为什么需要清除浮动？</h3>
+    <p>1.父级没高度</p>
+    <p>2.子盒子浮动了</p>
+    <p>3.影响下面布局了，我们就应该清除浮动了</p>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>清除浮动的方式</th>
+            <th>优点</th>
+            <th>缺点</th>
+        </tr>
+        <tr>
+            <td>额外标签法(隔墙法)</td>
+            <td>通俗易懂，书写方便</td>
+            <td>添加了许多无意义的便签，结构化较差</td>
+        </tr>
+        <tr>
+            <td>父级overflow：hidden;</td>
+            <td>书写简单</td>
+            <td>溢出隐藏</td>
+        </tr>
+        <tr>
+            <td>父级after伪元素</td>
+            <td>结构语义化正确</td>
+            <td>由于IE6-IE7不支持：after，兼容性问题</td>
+        </tr>
+        <tr>
+            <td>父级双伪元素</td>
+            <td>结构语义化正确</td>
+            <td>由于IE6-IE7不支持：after，兼容性问题</td>
+        </tr>
+    </table>
+</body>
+
+</html>

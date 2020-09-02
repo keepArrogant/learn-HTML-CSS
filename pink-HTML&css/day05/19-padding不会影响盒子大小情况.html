@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置padding不会影响盒子大小的情况</title>
+    <style>
+        h1 {
+            /* 不用设置宽度，然后设置内边距的时候默认不会超过body的宽度 */
+            height: 200px;
+            padding: 30px;
+            background-color: pink;
+        }
+
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+        }
+
+        div p {
+            /* 虽然p便签的上下内边距有变化 */
+            /* 只要不设置p便签的宽度p就不会把p盒子撑大导致超出了div盒子的范围 */
+            /* width: 300px; */
+            /* width: 100%; */
+            padding: 30px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

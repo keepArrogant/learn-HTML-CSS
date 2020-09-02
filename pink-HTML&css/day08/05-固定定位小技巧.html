@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位小技巧</title>
+    <style>
+        .w {
+            width: 800px;
+            height: 1400px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .fixed {
+            position: fixed;
+            /* 1.走浏览器宽度的的一半 */
+            left: 50%;
+            /* 2.利用margin 走版心盒子宽度的一半距离 */
+            margin-left: 405px;
+            top: 50%;
+            width: 50px;
+            height: 150px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed"></div>
+    <div class="w">版心盒子 800像素</div>
+    <h4>固定定位小技巧：固定在版心右侧位置</h4>
+    <span>小算法</span>
+    <p>1.让固定定位的盒子left：50%.走到浏览器可视区(也可以看做版心)的一半位置。</p>
+    <p>2.让固定定位的盒子margin-left：版心宽度的一半距离。多走版心宽度的一半位置就可以让固定定位的盒子贴着版心右侧对齐了</p>
+</body>
+
+</html>

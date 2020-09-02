@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级盒子水平居中对齐</title>
+    <style>
+        .header {
+            width: 900px;
+            height: 200px;
+            background-color: pink;
+            /* 上下没有外边距 左右水平居中 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <h4>外边距典型应用</h4>
+    <p>外边距可以让块级盒子水平居中，但是必须满足两个条件</p>
+    <p>1.盒子必须指定了宽度(width)</p>
+    <p>2.盒子左右的外边距都设置为auto</p>
+    <h5>常见的写法，以下三种都可以</h5>
+    <ul>
+        <li>margin-left:auto; margin-right:auto</li>
+        <li>margin:auto;</li>
+        <li>margin:0 auto</li>
+    </ul>
+</body>
+
+</html>

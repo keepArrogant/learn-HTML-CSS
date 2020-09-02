@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS层叠性</title>
+    <style>
+        div {
+            color: red;
+            font-size: 22px;
+
+        }
+
+        div {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>键盘敲烂，工资过万</div>
+    <p>相同选择器给设置相同的样式，此时一个样式就会覆盖(层叠)另一个冲突的样式。层叠性主要解决样式冲突的问题</p>
+    <p>层叠性原则：</p>
+    <ul>
+        <li>样式冲突，遵循的原则是就近原则，那个样式离结构近，就执行那个样式</li>
+        <li>样式不冲突，就不会层叠</li>
+    </ul>
+</body>
+
+</html>

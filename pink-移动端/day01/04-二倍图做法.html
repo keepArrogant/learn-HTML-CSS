@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二倍图</title>
+    <style>
+        /* 我们需要一个50*50像素(css像素)的图片 直接放到我们的iphone8 里面会放大2倍 100*100 就会模糊 */
+        /* 解决的办法 */
+        /* 放一个100*100的图片 然后手动把这个图片缩小为50*50(css像素) 然后它在iphone8里面会自动放大2倍，成为100*100的 就是图片本身的像素 */
+        /* 我们准备的图片 比我们实际需要的大小 大2倍， 这种方式就是2倍图 */
+        img:nth-child(2) {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 模糊的 -->
+    <img src="images/apple50.jpg" alt="">
+    <!-- 我们采取2倍图 -->
+    <img src="images/apple100.jpg" alt="">
+    <br>
+    <h4>多倍图</h4>
+    <ul>
+        <li>对于一张50*50px的图片，在手机Retina屏中打开，按照刚才的物理像素比会放大倍数，这样会造成图片模糊</li>
+        <li>在标准的viewport设置中，使用倍图来提高图片质量，解决在高清设备中的模糊问题</li>
+        <li>通常使用二倍图，因为iPhone6\7\8的影响，但是现在还存在3倍图4倍图的情况，这个看实际开发公司需求</li>
+        <li>背景图片 注意缩放问题</li>
+    </ul>
+</body>
+
+</html>

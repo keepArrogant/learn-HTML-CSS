@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示隐藏元素之visibility</title>
+    <style>
+        .baba {
+            visibility: hidden;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .mama {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baba">猪爸爸</div>
+    <div class="mama">猪妈妈</div>
+    <p>类似网站广告，当我们点击关闭就不见了，但是我们重新刷新页面，会重新出现！</p>
+    <span>本质：让一个元素在页面中隐藏或者显示出来。</span>
+    <h4>visibility可见性</h4>
+    <p>visibility属性用于指定一个元素应可见还是隐藏。</p>
+    <ul>
+        <li>visibility:visible; 元素可视</li>
+        <li>visibility:hidden; 元素隐藏</li>
+    </ul>
+    <span>visibility 隐藏元素后，继续占有原来的位置。</span>
+    <p>如果隐藏元素想要原来位置，就用visibility：hidden</p>
+    <p>如果隐藏元素不想要原来位置，就用display：none(用处更多 重点)</p>
+</body>
+
+</html>

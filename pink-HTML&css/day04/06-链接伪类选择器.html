@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链接伪类选择器</title>
+    <style>
+        /* 1.未访问的链接 a：link  把没有点击过的链接选出来 */
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* 2. a：visited 选择点击过的链接 */
+        a:visited {
+            color: orange;
+        }
+
+        /* 3. a:hover 选择鼠标经过的那个链接 */
+        a:hover {
+            color: skyblue;
+        }
+
+        /* 4. a:active 选择的是我们鼠标正在按下还没有弹起鼠标的那个链接 */
+        a:active {
+            color: green;
+        }
+
+        h4 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">小猪佩奇</a>
+
+    <hr>
+    <h4>链接伪类选择器注意事项</h4>
+    <p>1.为了确保生效，请按照LVHA的顺序声明:link visited hover active</p>
+    <p>2.记忆法：love hate 或者 lv包包hao</p>
+    <p>因为a链接在浏览器中具有默认样式，所以我们实际工作中都需要给链接单独指定样式</p>
+    <h4>链接伪类选择器实际工作中的写法</h4>
+    <!-- a是标签选择器 所有的链接 -->
+    <!-- a {
+        color：gray;
+    } -->
+    <!-- hover 是链接伪类选择器 鼠标经过的时候，由原来的灰色变成了红色 -->
+    <!-- a:hover{
+        color red;   
+    } -->
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS权重练习</title>
+    <style>
+        .nav {
+            color: red;
+        }
+
+        /* 虽然他是类选择器，权重高，可是继承下来权重永远为0 所以此时优先选择元素选择器的样式 */
+        li {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>人生四大悲</li>
+        <li>家里没宽带</li>
+        <li>网速不够快</li>
+        <li>手机没流量</li>
+        <li>学习没wifi</li>
+    </ul>
+</body>
+
+</html>

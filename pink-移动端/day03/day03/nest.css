@@ -1,0 +1,18 @@
+div {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+div a {
+  color: red;
+}
+div a:hover {
+  color: blue;
+}
+.nav .logo {
+  color: green;
+}
+.nav::before {
+  content: '上午';
+  color: skyblue;
+}

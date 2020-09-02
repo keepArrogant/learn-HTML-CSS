@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>栅格系统响应式工具</title>
+    <style>
+        .row div {
+            height: 200px;
+            background-color: pink;
+        }
+
+        .row div:nth-child(3) {
+            background-color: purple;
+        }
+
+        span {
+            font-size: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <span class="visible-lg">我会显示</span>
+            </div>
+            <div class="col-xs-3">2</div>
+            <div class="col-xs-3 hidden-md hidden-xs">我会变魔术</div>
+            <div class="col-xs-3">4</div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <h4>3.6 响应式工具</h4>
+    <p>为了加快对移动设备友好的页面开发工作，利用媒体查询功能，并使用这些工具类可以方便的针对不同设备展示或隐藏页面内容。</p>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>类名</th>
+            <th>超小屏</th>
+            <th>小屏</th>
+            <th>中屏</th>
+            <th>大屏</th>
+        </tr>
+        <tr>
+            <td>.hidden-xs</td>
+            <td>隐藏</td>
+            <td>可见</td>
+            <td>可见</td>
+            <td>可见</td>
+        </tr>
+        <tr>
+            <td>.hidden-sm</td>
+            <td>可见</td>
+            <td>隐藏</td>
+            <td>可见</td>
+            <td>可见</td>
+        </tr>
+        <tr>
+            <td>.hidden-md</td>
+            <td>可见</td>
+            <td>可见</td>
+            <td>隐藏</td>
+            <td>可见</td>
+        </tr>
+        <tr>
+            <td>.hidden-lg</td>
+            <td>可见</td>
+            <td>可见</td>
+            <td>可见</td>
+            <td>隐藏</td>
+        </tr>
+    </table>
+    <p>与之相反的 是visible-xs visible-sm visible-md visible-lg 是显示某个页面内容</p>
+    <p>Bootstrap 其他(按钮、表单、表格) 请参考Bootstrap文档</p>
+</body>
+
+</html>

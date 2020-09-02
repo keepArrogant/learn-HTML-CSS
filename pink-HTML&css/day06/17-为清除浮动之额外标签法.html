@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>额外标签法</title>
+    <style>
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <div class="ermao">二毛</div>
+        <div class="ermao">二毛</div>
+        <div class="ermao">二毛</div>
+        <div class="ermao">二毛</div>
+        <div class="clear"></div>
+        <!-- <span class="clear"></span> -->
+        <!-- 这个新增的盒子必须是块级元素不能是行内元素 -->
+    </div>
+    <div class="footer"></div>
+    <h5>额外标签法也称为隔墙法，是W3C推荐的做法</h5>
+    <h6>额外标签法会在浮动元素末尾添加一个空的标签。</h6>
+    <ul>
+        <li>优点：通俗易懂，书写方便</li>
+        <li>缺点：添加许多无意义的标签，结构化较差</li>
+        <p>注意：要求这个新的空便签必须是块级元素</p>
+    </ul>
+    <h4>总结：</h4>
+    <h5>1.清除浮动的本质是？</h5>
+    <p>清除浮动的本质是清除浮动元素脱离标准流造成的影响</p>
+    <h5>2.清除浮动策略是？</h5>
+    <p>闭合浮动，只让浮动在父盒子内部影响，不影响父盒子外面的其他盒子</p>
+    <h5>3.额外便签法？</h5>
+    <p>隔墙法，就是在最后一个浮动的子元素后面添加一个额外的便签，添加清除浮动的样式</p>
+    <p>实际工作可能会遇到，但是不常用</p>
+</body>
+
+</html>

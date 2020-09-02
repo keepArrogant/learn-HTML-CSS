@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增视频标签</title>
+    <style>
+        video {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <video src="images/miv.mp4" autoplay="autoplay" muted="muted" controls="controls" loop="loop"
+        poster="images/mi9.jpg"></video>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性</th>
+            <th>值</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>autoplay</td>
+            <td>autoplay</td>
+            <td>视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)</td>
+        </tr>
+        <tr>
+            <td>controls</td>
+            <td>controls</td>
+            <td>向用户显示播放控件</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>pixels(像素)</td>
+            <td>设置播放器宽度</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>pixels(像素)</td>
+            <td>设置播放器高度</td>
+        </tr>
+        <tr>
+            <td>loop</td>
+            <td>loop</td>
+            <td>播放完是否继续播放该视频，循环播放</td>
+        </tr>
+        <tr>
+            <td>preload</td>
+            <td>auto(预先加载视频)，none(不应加载视频)</td>
+            <td>规定是否预加载视频(如果有了autoplay 就忽略该属性)</td>
+        </tr>
+        <tr>
+            <td>src</td>
+            <td>url</td>
+            <td>视频url地址</td>
+        </tr>
+        <tr>
+            <td>poster</td>
+            <td>imgurl</td>
+            <td>加载等待的画面图片</td>
+        </tr>
+        <tr>
+            <td>muted</td>
+            <td>muted</td>
+            <td>静音播放</td>
+        </tr>
+    </table>
+</body>
+
+</html>

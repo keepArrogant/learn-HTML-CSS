@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除内外边距</title>
+    <style>
+        /* 这句话也是我们css的第一行代码 */
+        * {
+            /* 清除外边距 */
+            margin: 0;
+            /* 清除内边距 */
+            padding: 0;
+        }
+
+        span {
+            background-color: pink;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>123</p>
+    <ul>
+        <li>asdasd</li>
+    </ul>
+    <span>每个便签都会自带他的内外边距，不过是大小不同罢了</span>
+    <h3 style="color: red;">注意：行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级和行内块元素就可以了</h3>
+    <p>因为设置了行内元素的上下内外边距了没起什么效果。</p>
+</body>
+
+</html>

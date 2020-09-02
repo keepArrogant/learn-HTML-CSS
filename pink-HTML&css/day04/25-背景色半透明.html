@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景色半透明</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: #333;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>最后一个参数是alpha透明度，取值范围在0~1之间</li>
+        <li>我们习惯把0.3的0省略掉，写为.3</li>
+        <li>注意：背景半透明是指盒子背景半透明，盒子里面的内容不受影响</li>
+        <li>CSS3新增属性，是IE9+版本浏览器才支持的</li>
+        <li>但是现在实际开发，我们不太关注兼容性写法了，可以放心使用</li>
+    </ul>
+</body>
+
+</html>

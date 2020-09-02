@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin负值的巧妙运用</title>
+    <style>
+        ul li {
+            float: left;
+            list-style: none;
+            width: 80px;
+            height: 200px;
+            border: 1px solid red;
+            /* 因为添加了浮动会靠在一起，靠在一起的边框会叠加变厚，这时候就需要把每个盒子往左边移动边框厚度的大小 以至于不叠加变厚 */
+            margin-left: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <Li>1</Li>
+        <Li>2</Li>
+        <Li>3</Li>
+        <Li>4</Li>
+        <Li>5</Li>
+    </ul>
+</body>
+
+</html>

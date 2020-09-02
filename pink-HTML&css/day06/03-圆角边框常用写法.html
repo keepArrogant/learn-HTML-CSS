@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框常用写法</title>
+    <style>
+        .yuanxing {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 正方形变为圆形就需要把它的高度和宽度数值设置为正方形的一半 */
+            /* border-radius: 100px; */
+            /* 最简单的写法  50%就是宽度和高度的一半 */
+            border-radius: 50%;
+        }
+
+        .juxing {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            /* 圆角矩形把边框半径设置为高度的一半 */
+            border-radius: 50px;
+        }
+
+        .radius {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 边框半径设置四个数值就是从盒子的左上角开始顺时针旋转 */
+            /* border-radius: 10px 20px 30px 40px; */
+            /* 边框半径设置两个个数值就是从左上角开始 对角成组为一个数值 */
+            border-radius: 10px 40px;
+            /* 边框半径设置三个个数值就是从左上角开始 顺时针，不过第二个数值为第二个角和它的对角成组是一个数值 */
+            border-radius: 10px 40px 60px;
+
+        }
+    </style>
+</head>
+
+<body>
+    1.圆形的做法：
+    <div class="yuanxing"></div>
+    2.圆角矩形的做法：
+    <div class="juxing"></div>
+    3.可以设置不同的圆角
+    <div class="radius"></div>
+    <p>不仅可以简写，而且可以分开来设置某一个边框角的数值</p>
+    <p style="color: red;">分开写：border-top-left-radius 、
+        border-top-right-radius、border-bottom-right-radius和border-bottom-left-radius</p>
+</body>
+
+</html>

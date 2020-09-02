@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的堆叠顺序</title>
+    <style>
+        .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .xiongda {
+            background-color: red;
+            z-index: 1;
+        }
+
+        .xionger {
+            background-color: greenyellow;
+            z-index: 2;
+            left: 50px;
+            top: 50px;
+        }
+
+        .guangtouqiang {
+            background-color: pink;
+            z-index: 3;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box xiongda">熊大</div>
+    <div class="box xionger">熊二</div>
+    <div class="box guangtouqiang">光头强</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>在使用定位布局时，可能会出现盒子重叠的情况。此时，可以使用z-index来控制盒子的前后次序(z轴)语法：</p>
+    <span>选择器 {z-index: 1;}</span>
+    <ul>
+        <li>数值可以是正整数、负整数或0，默认是auto，数值越大，盒子越靠上</li>
+        <li>如果属性值相同，则按照书写顺序，后来居上</li>
+        <li>数字后面不能加单位</li>
+        <li>只有定位的盒子才有z-index属性</li>
+    </ul>
+</body>
+
+</html>

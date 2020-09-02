@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外边距合并-嵌套块级元素垂直外边距塌陷</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+            /* 给父元素设置一个透明的边框 这样执行子元素的头外边距就不会发生合并了 */
+            /* border: 1px solid transparent; */
+            /* 给父元素设置一个内边距，这样也不会合并 */
+            /* padding: 1px; */
+            /* 最好的方案是可以为父元素添加溢出：隐藏  这样就不会影响盒子的大小*/
+            overflow: hidden;
+
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+            /* margin: 100px auto; */
+            /* 当父元素和子元素都设置了margin-top就会发生外边距合并，较大的那个为外边距 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

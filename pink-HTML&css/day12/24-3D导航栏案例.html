@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D导航栏案例</title>
+    <style>
+        ul {
+            margin: 100px;
+        }
+
+        ul li {
+            float: left;
+            width: 120px;
+            margin: 0 5px;
+            height: 35px;
+            list-style: none;
+            /* 一会儿我们需要给box 旋转 也需要透视 干脆给li加 */
+            perspective: 500px;
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all .5s linear;
+        }
+
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+        .front,
+        .bottom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            color: snow;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .front {
+            background-color: pink;
+            transform: translateZ(17.5px);
+        }
+
+        .bottom {
+            background-color: skyblue;
+            /* 这个一定是负值，因为最后的效果翻转上去字是正的，如果是沿着x轴正方向旋转，最后的效果字是倒过来的 */
+            transform: translateY(17.5px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">我是好人</div>
+                <div class="bottom">我是坏人</div>
+            </div>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">我是好人</div>
+                <div class="bottom">我是坏人</div>
+            </div>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">我是好人</div>
+                <div class="bottom">我是坏人</div>
+            </div>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">我是好人</div>
+                <div class="bottom">我是坏人</div>
+            </div>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">我是好人</div>
+                <div class="bottom">我是坏人</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栅格系统使用</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        [class^="col"] {
+            border: 1px solid #ccc;
+        }
+
+        .container .row:nth-child(1) {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 如果孩子的份数相加等于12 则孩子能占满整个的 container 的宽度 -->
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-2">4</div>
+        </div>
+        <!-- 如果孩子的份数小于12 则占不满整个container 的宽度 会有空白 -->
+        <div class="row">
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-1">4</div>
+        </div>
+        <!-- 如果孩子的份数相加 大于12  则会 多余的那一列会另起一行显示 -->
+        <div class="row">
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-3">4</div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <h4>3.2 栅格选项参数</h4>
+    <p>栅格系统用于通过一系列的行(row)与列(column)的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。</p>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th></th>
+            <th>超小屏幕(手机) 小于768px</th>
+            <th>小屏设备(平板) 大于等于768px</th>
+            <th>中等屏幕(桌面显示器) 大于等于992px</th>
+            <th>宽屏设备(大桌面显示器) 大于等于1200px</th>
+        </tr>
+        <tr>
+            <td>.container 最大宽度</td>
+            <td>自动(100%)</td>
+            <td>750px</td>
+            <td>970px</td>
+            <td>1170px</td>
+        </tr>
+        <tr>
+            <td>类前缀</td>
+            <td>.col-xs-</td>
+            <td>.col-sm-</td>
+            <td>.col-md-</td>
+            <td>.col-lg-</td>
+        </tr>
+        <tr>
+            <td>列(column)数</td>
+            <td colspan="4" style="text-align: center;">12</td>
+        </tr>
+    </table>
+    <hr>
+    <ul>
+        <li>行(row) 必须放到container布局容器里面</li>
+        <li>我们实现列的平均划分 需要给列添加类前缀</li>
+        <li>xs-extra small: 超小; sm-small: 小; md-medium:中等; lg-large: 大;</li>
+        <li>列(column)大于12, 多余的 "列(column)" 所在的元素将被作为一个整体另起一行</li>
+        <li>每一列默认有左右15像素的padding</li>
+        <li>可以同时为一列指定多个设备的类名，以便划分不同份数，例如：class="col-md-4 col-sm-6"</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局体验</title>
+    <style>
+        div {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: pink;
+            justify-content: space-around;
+        }
+
+        div span {
+            /* width: 150px; */
+            height: 100px;
+            background-color: purple;
+            margin-right: 5px;
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <hr>
+    <h3>传统布局与flex布局</h3>
+    <h4>传统布局</h4>
+    <ul>
+        <li>兼容性好</li>
+        <li>布局繁琐</li>
+        <li>局限性，不能在移动端很好的布局</li>
+    </ul>
+    <h4>flex弹性布局</h4>
+    <ul>
+        <li>操作方便，布局极为简单，移动端应用很广泛</li>
+        <li>PC端浏览器支持情况较差</li>
+        <li>IE 11或更低版本，不支持或仅部分支持</li>
+    </ul>
+    <span>建议：</span>
+    <p>1.如果是PC端页面布局，我们还是用传统布局。</p>
+    <p>2.如果是移动端或者不考虑兼容性问题的PC端页面布局，我们还是使用flex弹性布局</p>
+</body>
+
+</html>

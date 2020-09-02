@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的总结</title>
+    <style>
+        .red>td {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>定位模式</th>
+            <th>是否脱标</th>
+            <th>移动位置</th>
+            <th>是否常用</th>
+        </tr>
+        <tr>
+            <td>static静态定位</td>
+            <td>否</td>
+            <td>不能使用边偏移</td>
+            <td>很少</td>
+        </tr>
+        <tr class="red">
+            <td>relative相对定位</td>
+            <td>否(占有位置)</td>
+            <td>相对于自身位置移动</td>
+            <td>常用</td>
+        </tr>
+        <tr class="red">
+            <td>absolute绝对定位</td>
+            <td>是(不占有位置)</td>
+            <td>带有定位的父级</td>
+            <td>常用</td>
+        </tr>
+        <tr class="red">
+            <td>fixed固定定位</td>
+            <td>是(不占有位置)</td>
+            <td>浏览器可视区</td>
+            <td>常用</td>
+        </tr>
+        <tr>
+            <td>sticky粘性定位</td>
+            <td>否(占有位置)</td>
+            <td>浏览器可视区</td>
+            <td>当前阶段少</td>
+        </tr>
+    </table>
+    <p>1.一定记住：相对定位、固定定位、绝对定位 两个大的特点：1.是否占有位置(脱标否？)2.以谁为基准移动位置</p>
+    <p>2.学习定位重点学会子绝父相</p>
+</body>
+
+</html>

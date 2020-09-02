@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子内边距复合写法</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* padding-top: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 5px; */
+            /* 内边距复合写法 简写 */
+            /* padding: 5px; */
+            /* padding: 5px 10px; */
+            /* padding: 5px 10px 20px; */
+            padding: 5px 10px 20px 30px;
+        }
+
+        table {
+            width: 500px;
+            height: 300px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid pink;
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>键盘敲烂，工资过万，左拥右抱，豪车相伴，人生不过，如此而已</div>
+    <hr>
+    <table cellspacing="0">
+        <tr>
+            <th>值的个数</th>
+            <th>表达意思</th>
+        </tr>
+        <tr>
+            <td>padding：5px</td>
+            <td>1个值，代表上下左右都有5像素的内边距</td>
+        </tr>
+        <tr>
+            <td>padding：5px 10px</td>
+            <td>2个值，代表上下内边距为5像素，左右内边距是10像素</td>
+        </tr>
+        <tr>
+            <td>padding：5px 10px 20px</td>
+            <td>3个值，代表上内边距为5像素，左右内边距为10像素，下内边距是20像素</td>
+        </tr>
+        <tr>
+            <td>padding：5px 10px 20px 30px</td>
+            <td>4个值，上是5像素，右是10像素 下20像素 左30像素 顺时针</td>
+        </tr>
+    </table>
+</body>
+
+</html>

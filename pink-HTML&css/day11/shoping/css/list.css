@@ -1,0 +1,150 @@
+/* 列表页专有的样式 */
+
+.nav {
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    font-family: 'iconfont';
+    content: '\e69e';
+}
+
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    /* background-color: pink; */
+    margin-right: 12px;
+    margin-bottom: 5px;
+    margin-top: 23px;
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #e12228;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.p_bd {
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+.p_bd p {
+    display: block;
+    width: 266px;
+    height: 36px;
+    margin-top: 15px;
+    margin-bottom: 13px;
+}
+
+.h_bd {
+    float: left;
+    width: 266px;
+    height: 18px;
+}
+
+.h_bd h3 {
+    display: inline-block;
+    font-size: 22px;
+    color: #e60012;
+    margin-right: 7px;
+}
+
+.h_bd h5 {
+    display: inline-block;
+    font-size: 14px;
+    color: #ababab;
+    text-decoration: line-through;
+}
+
+.p_body {
+    float: left;
+    width: 262px;
+    height: 13px;
+    margin-top: 16px;
+}
+
+.p_body>span {
+    display: block;
+    float: left;
+    font-size: 14px;
+    color: #ababab;
+    line-height: 13px;
+}
+
+.pp {
+    float: left;
+    width: 134px;
+    height: 13px;
+    border-radius: 6px;
+    border: 1px solid #e6454a;
+    margin: 0 5px;
+}
+
+.p_1 {
+    width: 117px;
+    height: 12px;
+    border-radius: 5px 0 0 6px;
+    background-color: #ed282e;
+}
+
+.qiang {
+    float: left;
+    margin-top: 14px;
+    width: 289px;
+    height: 50px;
+    background-color: #b1191a;
+}
+
+.qiang a h3 {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #faf4f4;
+}

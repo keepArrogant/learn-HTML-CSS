@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景线性渐变</title>
+    <style>
+        div {
+            width: 600px;
+            height: 200px;
+            /* 背景渐变必须添加浏览器私有前缀 */
+            /* background: -webkit-linear-gradient(left, pink, green); */
+            /* 可以省略起始位置，那么默认是从上到下渐变 */
+            /* background: -webkit-linear-gradient(pink, purple); */
+            background: -webkit-linear-gradient(top left, pink, purple);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

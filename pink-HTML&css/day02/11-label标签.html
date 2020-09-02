@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label标签</title>
+</head>
+<body>
+    <p>label标签为input元素定义标注(标签)</p>
+    <p>label标签用于绑定一个表单元素，当点击label标签内的文本时，浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上，用来增加用户体验</p>
+    <p>核心：label标签的for属性应当与相关元素的id属性相同</p>
+    <form action="xxx.php">
+        <label for="name">用户名：</label><input type="text" name="username" id="name" value="请输入用户名"><br>
+        <label for="password">密码：</label><input type="passwprd" name="pwd" id="password"><br>
+        性别：<label for="nan">男</label><input type="radio" name="sex" id="nan" checked="checked"><label for="nv">女</label><input type="radio" name="sex" id="nv">
+    </form>
+</body>
+</html>

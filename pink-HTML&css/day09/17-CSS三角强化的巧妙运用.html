@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角强化的巧妙运用理论</title>
+    <style>
+        .box1 {
+            width: 0px;
+            height: 0px;
+            /* 上边框高度调高设置为透明色
+            border-top: 100px solid transparent;
+            border-right: 50px solid skyblue;
+             左边和下边的宽度设置为0 
+            border-bottom: 0 solid blue;
+            border-left: 0 solid green;  */
+            /* 简单写法：1.只保留右边的边框有颜色 */
+            border-color: transparent red transparent transparent;
+            /* 2.样式都是solid */
+            border-style: solid;
+            /* 3.上边框宽度要大，右边框 宽度稍小， 其余的边框宽度为0 */
+            border-width: 100px 50px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+</body>
+
+</html>

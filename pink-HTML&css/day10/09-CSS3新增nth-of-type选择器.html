@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增nth-of-type选择器</title>
+    <style>
+        ul li:nth-of-type(even) {
+            background-color: springgreen;
+        }
+
+        ul li:nth-of-type(odd) {
+            background-color: steelblue;
+        }
+
+        /* ---------------- */
+        /* nth-child 会把所有的盒子都排列序号 */
+        /* 它执行的时候首先nth-child(1) 是佩奇 然后看前面的div 发现不匹配 就无法执行下面的特性 */
+        section div:nth-child(1) {
+            background-color: tan;
+        }
+
+        /* nth-of-type 会把指定元素的盒子排列序号 */
+        /* 执行的时候首先看 div 指定的元素 之后去看 nth-of-type(1) 发现是div的第一个孩子 */
+        /* 冒号后的是是结构伪类选择器 权重为10 前面是元素 权重为1 有两个 那么一共权重为12 */
+        section div:nth-of-type(1) {
+            background-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第一个孩子</li>
+        <li>我是第二个孩子</li>
+        <li>我是第三个孩子</li>
+        <li>我是第四个孩子</li>
+        <li>我是第五个孩子</li>
+        <li>我是第六个孩子</li>
+        <li>我是第七个孩子</li>
+    </ul>
+    <!-- 区别 -->
+    <section>
+        <p>佩奇</p>
+        <div>乔治</div>
+        <div>猪爸爸</div>
+    </section>
+</body>
+
+</html>

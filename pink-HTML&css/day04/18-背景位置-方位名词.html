@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景位置方位名词</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            background-image: url(男.png);
+            background-repeat: no-repeat;
+            /* background-position:  方位名词; */
+            /* background-position: center top; */
+            /* background-position: right center; */
+            /* 如果是方位名词 right center 和 center right  效果是等价的 */
+            /* background-position: center right; */
+            /* 此时水平一定是靠右侧对齐 第二个参数省略 y轴是垂直居中显示的 */
+            /* background-position: right; */
+            /* 此时第一个参数一定是top y轴 顶部对齐 第二个参数省略x 轴是 水平居中显示的 */
+            background-position: top;
+            /* 其实可以理解为所有的图片都是在块元素的中心点水平铺开的 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

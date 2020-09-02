@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动注意点</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 500px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            /* float: left; */
+            width: 210px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .sanmao {
+            float: left;
+            width: 300px;
+            height: 240px;
+            background-color: skyblue;
+        }
+
+        /* 大毛和二毛都浮动，三毛不浮动的话。三毛就在他们俩的底部 */
+        /* 如果大毛没浮动 二毛浮动了 三毛没浮动。 那么二毛就会另起一行浮动，三毛就会在二毛的底部。因为大毛没浮动自占一行 三毛又在二毛的后面 所以就会在底部 */
+        /* 如果大毛和三毛浮动了，二毛没浮动，那么二毛会在大毛的底部，并且独占一行，三毛就挤到下面浮动了 */
+        p {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <div class="sanmao">三毛</div>
+    </div>
+    <h4>1.浮动和标准流的父盒子搭配</h4>
+    <p>先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置</p>
+    <h4>2.一个元素浮动了，理论上其余的兄弟也要浮动</h4>
+    <h6>一个盒子里面有多个子盒子，如果其中一个盒子浮动了，那么其他兄弟也应该浮动，以防止引起问题</h6>
+    <p>浮动的盒子只会影响浮动盒子后面的标准流不会影响前面的标准流</p>
+</body>
+
+</html>

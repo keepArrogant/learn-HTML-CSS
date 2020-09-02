@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-奔跑的熊大案例</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+
+        .bg2 {
+            position: absolute;
+            bottom: 0;
+            width: 1900px;
+            height: 569px;
+            background: url(img/bg2.png) no-repeat;
+            animation: bg1 45s linear infinite;
+        }
+
+        .bg1 {
+            position: absolute;
+            bottom: 0;
+            width: 1900px;
+            height: 336px;
+            background: url(img/bg1.png) no-repeat;
+            animation: bg1 50s linear infinite;
+        }
+
+        .bear {
+            position: absolute;
+            bottom: 20px;
+            width: 200px;
+            height: 100px;
+            background: url(img/bear.png) no-repeat;
+            animation: bear 1s steps(8) infinite, move 4s linear forwards;
+
+        }
+
+        @keyframes bg1 {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1800px 0;
+            }
+        }
+
+        @keyframes bear {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -1600px 0;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: 50%;
+                /* margin-left: -100px; */
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg2">
+        <div class="bg1">
+            <div class="bear"></div>
+        </div>
+    </div>
+</body>
+
+</html>

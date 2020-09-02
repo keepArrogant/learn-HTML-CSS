@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotateyY</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+
+        img {
+            display: block;
+            margin: 100px auto;
+            transition: all 1s linear;
+        }
+
+        img:hover {
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/pig.jpg" alt="">
+    <br>
+    <h3>左手准则</h3>
+    <ul>
+        <li>左手的手拇指指向y轴的正方向</li>
+        <li>其余手指的弯曲方向就是该元素沿着y轴旋转的方向(正值)</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双伪元素清除浮动</title>
+    <style>
+        .clearfix::before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+    </div>
+    <div class="footer"></div>
+    <p>双伪元素清除浮动也是给父元素添加样式 ，父元素的子元素最前面有堵墙，最后一个子元素的最后面也有堵墙</p>
+    <ul>
+        <li>优点：代码更简洁</li>
+        <li>缺点：照顾低版本浏览器</li>
+        <li>代表网站：小米、腾讯等</li>
+    </ul>
+
+</html>

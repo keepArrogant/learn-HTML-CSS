@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重注意点</title>
+    <style>
+        #father {
+            color: red;
+        }
+
+        /* p继承的权重为0 所以执行自己元素选择器的样式 */
+        p {
+            color: pink;
+        }
+
+        body {
+            color: powderblue;
+        }
+
+        /* a链接浏览器默认指定了一个样式 蓝色的 有下划线 */
+        /* 继承的权重永远为0 */
+    </style>
+</head>
+
+<body>
+    <div id="father">
+        <p>你还是很好看</p>
+    </div>
+    <a href="#">我有自己单独的样式</a>
+    <h4>优先级注意点</h4>
+    <p>1.权重是有4组数字组成，但是不会有进位</p>
+    <p>2.可以理解为类选择器永远大于元素选择器，id选择器永远大于类选择器，以此类推</p>
+    <p>3.等级判断从左向右，如果某一位数值相同，则判断下一位数值</p>
+    <p>4.可以简单记忆法：通配符和继承权重为0，标签选择器为1，类(伪类)选择器为10，id选择器100，行内样式表为1000，!important无穷大</p>
+    <p>继承的权重是0，如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0</p>
+</body>
+
+</html>

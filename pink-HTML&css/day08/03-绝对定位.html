@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位absolute(重要)</title>
+    <style>
+        .yeye {
+            position: relative;
+            /* 如果爷爷和父亲都有定位，儿子绝对定位的位置会以父亲的位置为基准 */
+            width: 900px;
+            height: 900px;
+            background-color: powderblue;
+            padding: 50px;
+        }
+
+        .father {
+            position: relative;
+            /* 如果父亲开启了定位，则子元素的绝对定位是相对于父元素的位置来确定的 */
+            top: 100px;
+            left: 50px;
+            width: 500px;
+            height: 500px;
+            background-color: rebeccapurple;
+        }
+
+        .son {
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        span {
+            color: red;
+            font-size: 16px;
+        }
+
+        body {
+            width: 3500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son">
+            </div>
+        </div>
+    </div>
+    <h4>绝对定位是元素在移动的时候，是相对于它的祖先元素来说的(拼爹型)</h4>
+    <span>语法：选择器{position：absolute}</span>
+    <h5>绝对定位的特点：(务必记住)</h5>
+    <p>1.如果没有祖先元素或者祖先元素没有定位，则以浏览器为准定位(Document文档)</p>
+    <p>2.如果祖先元素有定位(相对、绝对、固定定位)，则以最近一级有定位祖先元素为参考点移动位置</p>
+    <p>绝对定位不再占有原先的位置(脱标)</p>
+    <hr>
+    <br>
+    <h4>子绝父相的由来</h4>
+    <p>弄清楚这个口诀，就明白了绝对定位和相对定位的使用场景</p>
+    <p>这个“子绝父相”太重要了，是我们学习定位的口诀，是定位中最常用的一种方式，这句话的意思是：</p>
+    <span>子级是绝对定位的话，父级要用相对定位</span>
+    <p>1.子级绝对定位，不会占有位置，可以放到父盒子里面的任何一个地方，不会影响其他的兄弟盒子</p>
+    <p>2.父盒子需要加定位限制子盒子在父盒子内显示</p>
+    <p>3.父盒子布局时，需要占有位置，因此父亲只能是相对定位。</p>
+    <p>这就是子绝父相的由来，所以<span>相对定位经常用来作为绝对定位的父级</span></p>
+    <span>总结：因为父级需要占有位置，因此是相对定位，子盒子不需要占有位置，则是绝对定位</span>
+    <p>当然，子绝父相不是永远不变的，如果父元素不需要占有位置，子绝父绝也会遇到</p>
+</body>
+
+</html>

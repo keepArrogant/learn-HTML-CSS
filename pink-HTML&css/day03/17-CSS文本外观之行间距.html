@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本外观之行间距</title>
+    <style>
+        /* 行间距，设置26px 普通文字大小默认16px，然后26-16=10/2=5px 5px是文字上下行间距 */
+        div {
+            line-height: 26px;
+        }
+        p {
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>人生絮语</div>
+    <p>当不幸降临在他人头上时，他们往往都能像智者一样劝慰别人；而当同样的不幸降临自己身上时，人往往很难同样地开导自己。</p>
+    <p>看别人生活时，我们总喜欢是放大他们的幸福，忽略他们生活中的不幸，所以别人的生活怎么看都觉的幸福。而在看待自己生活时，人们总喜欢缩小自己的幸福，扩大自己的烦恼，所以我们对自己的生活总有太多的不满。</p>
+    <p>看到别人取得成功时，我们会说，他们的运气好；当他们遭遇失败时，我们会说，他们不努力。自己取得成功时，我们会说这是自己努力的结果；若遭遇失败，我们会自我解嘲说都是环境的错。</p>
+
+    <br>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性</th>
+            <th>表示</th>
+            <th>注意点</th>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>文本颜色</td>
+            <td>我们通常用十六进制 比如 而且是简写形式#fff</td>
+        </tr>
+        <tr>
+            <td>text-align</td>
+            <td>文本对齐</td>
+            <td>可以设置文字水平的对齐方式</td>
+        </tr>
+        <tr>
+            <td>text-indent</td>
+            <td>文本缩进</td>
+            <td>通常我们用于段落首行缩进2个字的距离 text-indent:2em;</td>
+        </tr>
+        <tr>
+            <td>text-decoration</td>
+            <td>文本修饰</td>
+            <td>记住 添加下划线underline 取消下划线 none</td>
+        </tr>
+        <tr>
+            <td>line-height</td>
+            <td>行高</td>
+            <td>控制行与行之间的距离</td>
+        </tr>
+    </table>
+</body>
+</html>

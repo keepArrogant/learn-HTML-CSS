@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D转换之位移translate</title>
+    <style>
+        /* 移动盒子的位置 ： 定位  盒子的外边距 2d转换移动 */
+        div {
+            width: 200px;
+            height: 200px;
+            /* x就是x轴上移动位置 y就是y轴上移动位置 中间用逗号分隔 */
+            /* transform: translate(x, y); */
+            /* transform: translate(100px, 100px); */
+            /* 1.我们如果只移动x坐标 */
+            /* transform: translate(100px, 0); */
+            /* transform: translateX(100px); */
+            /* 1.我们如果只移动y坐标 */
+            /* transform: translate(0, 100px); */
+            /* transform: translateY(100px); */
+        }
+
+        div:first-child {
+            background-color: greenyellow;
+            transition: all .5s;
+        }
+
+        div:nth-child(even) {
+            background-color: skyblue;
+        }
+
+
+        div:first-child:hover {
+            transform: translate(50px, 50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <br>
+    <h3>重点</h3>
+    <ul>
+        <li>定义2D转换中的移动，沿着X和Y轴移动元素</li>
+        <li>translate最大的优点：不会影响到其他元素的位置</li>
+        <li>translate中的百分比单位是相对于自身元素的translate:(50%,50%);</li>
+        <li>对行内标签没有效果</li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝对定位水平垂直居中</title>
+    <style>
+        .box {
+            /* 使用了绝对定位，那么他的margin水平垂直居就没有效果了 */
+            position: absolute;
+            /* 1.left 走50% 父容器宽度的一半 */
+            left: 50%;
+            /* 2.margin - left 负值 往左边走 自己盒子宽度的一半 */
+            margin-left: -100px;
+            /* 水平居中了 那么垂直居中也是同理 */
+            top: 50%;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* margin: auto */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

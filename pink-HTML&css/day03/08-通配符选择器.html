@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础选择器之通配符选择器</title>
+    <style>
+        * {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>哈哈哈</div>
+    <p>变色</p>
+    <span>我也变</span>
+    <br>
+
+    <h4>基础选择器总结</h4>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>基础选择器</th>
+            <th>作用</th>
+            <th>特点</th>
+            <th>使用情况</th>
+            <th>用法</th>
+        </tr>
+        <tr>
+            <td>标签选择器</td>
+            <td>可以选出所有相同的标签，比如p</td>
+            <td>不能差异化选择</td>
+            <td>较多</td>
+            <td>p {color：red;}</td>
+        </tr>
+        <tr>
+            <td>类选择器</td>
+            <td>可以选出1个或者多个标签</td>
+            <td>可以根据需求选择</td>
+            <td>非常多</td>
+            <td>.nav {color: red;}</td>
+        </tr>
+        <tr>
+            <td>id选择器</td>
+            <td>一次只能选择1个标签</td>
+            <td>id属性只能在每个html文档中出现一次</td>
+            <td>一般和js搭配</td>
+            <td>#nav {color: red;}</td>
+        </tr>
+        <tr>
+            <td>通配符选择器</td>
+            <td>选择所有的标签</td>
+            <td>选择的太多，有部分不需要</td>
+            <td>特殊情况使用</td>
+            <td>*{color：red;}</td>
+        </tr>
+    </table>
+    <ul>
+        <li>每个基础选择器都有使用场景，都需要掌握</li>
+        <li>如果是修改样式，类选择器是使用最多的</li>
+</body>
+</html>

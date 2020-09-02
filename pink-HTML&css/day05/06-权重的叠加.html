@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>权重的叠加</title>
+    <style>
+        /* 复合选择器会有权重叠加的问题 */
+        /* 权重虽然会叠加，但是永远不会有进位 */
+        /* ur li 的权重 0，0，0，1+0，0，0，1 = 0，0，0，2 */
+        ul li {
+            color: green;
+        }
+
+        /* li的权重为 0，0，0，1 */
+        li {
+            color: red;
+        }
+
+        /* .nav li 权重 0，0，1，0 +0，0，0，1 = 0，0，1，1  */
+        .nav li {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>可乐</li>
+        <li>炸鸡</li>
+        <li>炒米粉</li>
+    </ul>
+    <h4>权重叠加：如果是复合选择器，则会有权重叠加，需要计算权重</h4>
+    <ul>
+        <li>div ul li ----> 0,0,0,3</li>
+        <li>.nav ul li ----> 0,0,1,2</li>
+        <li>a:hover----> 0,0,1,1</li>
+        <li>.nav a ----> 0,0,1,1</li>
+    </ul>
+</body>
+
+</html>

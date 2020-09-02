@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        ol li {
+            color: pink;
+        }
+
+        ol li a {
+            color: red;
+        }
+
+        .nav li a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol的孩子</li>
+        <li>我是ol的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li><a href="#">我想和上面的ul中的a区分</a></li>
+        <li><a href="#">我想和上面的ul中的a区分</a></li>
+        <li><a href="#">我想和上面的ul中的a区分</a></li>
+    </ul>
+</body>
+
+</html>

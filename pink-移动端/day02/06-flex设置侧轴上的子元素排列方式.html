@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex设置侧轴上的子元素排列方式</title>
+    <style>
+        div {
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            /* 默认的是x轴 row */
+            /* 如果设置主轴为y轴 column  然后设置子盒子会先竖着居中排列，然后侧轴居中了就会移动到中央竖着排列*/
+            flex-direction: column;
+            /* 设置主轴居中 */
+            justify-content: center;
+            /* 我们给侧轴加居中 也就是默认的侧轴为y轴加垂直居中 */
+            align-items: center;
+            /* 设置侧轴以底部开始排列 */
+            /* align-items: flex-end; */
+            /* 设置拉伸，但是子盒子不要给高度 这样子盒子就被拉长与父盒子同等高度*/
+            /* align-items: stretch; */
+        }
+
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            color: #fff;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <hr>
+    <br>
+    <h4>align-items设置侧轴上的子元素排列方式(单行)</h4>
+    <span>该属性是控制子项在侧轴(默认的是y轴)上的排列方式 在子项为单项的时候使用</span>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性值</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>flex-start</td>
+            <td>默认值 从上到下</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>从下到上</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>挤在一起居中(垂直居中)</td>
+        </tr>
+        <tr>
+            <td>stretch</td>
+            <td>拉伸</td>
+        </tr>
+    </table>
+</body>
+
+</html>

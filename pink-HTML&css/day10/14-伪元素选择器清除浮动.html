@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器清除浮动</title>
+    <style>
+        .box {
+            width: 800px;
+            height: 800px;
+            background-color: slateblue;
+            margin: 100px auto;
+        }
+
+        .box1,
+        .box2 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .box4 {
+            width: 300px;
+            height: 300px;
+            background-color: greenyellow;
+        }
+
+        /* 第一种 在最后一个浮动元素里面添加一堵墙 */
+        .clearfix:after {
+            /* 伪元素必须写的属性 */
+            content: '';
+            /* 插入的元素必须是块级的 */
+            display: block;
+            /* 不要看见这个元素 */
+            height: 0;
+            /* 核心代码清除浮动 */
+            clear: both;
+            /* 不要看见这个元素 */
+            visibility: hidden;
+        }
+
+        /* 第二种，在浮动元素的最前面和最后面分别添加一堵墙 */
+        .clearfix:before,
+        .clearfix:after {
+            content: '';
+            /* 转换为块级元素并且在一行显示 */
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+    <div class="box4">4</div>
+</body>
+
+</html>

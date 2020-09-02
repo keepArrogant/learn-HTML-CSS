@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示隐藏之overflow溢出隐藏</title>
+    <style>
+        .kris {
+            /* 溢出可见 */
+            /* overflow: visible; */
+            /* 溢出隐藏 */
+            /* overflow: hidden; */
+            /* scroll 溢出的部分显示滚动条， 不溢出也显示滚动条 */
+            /* overflow: scroll; */
+            /* auto 溢出的时候才显示滚动条 不溢出不显示滚动条 */
+            overflow: auto;
+            width: 200px;
+            height: 200px;
+            border: 3px solid pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kris">
+        吴亦凡（Kris），1990年11月6日出生于中国广东省广州市，华语影视男演员、流行乐歌手。
+        2007年，吴亦凡加入了韩国SM娱乐公司。2012年作为EXO组合成员正式出道，担任EXO/EXO-M队长、主Rapper、门面。
+        2014年5月15日，吴亦凡正式向首尔中央地方法院请求判决与SM娱乐公司专属合同无效。之后吴亦凡回归中国发展，出演个人首部电影，担任徐静蕾执导的电影《有一个地方只有我们知道》男主角，凭此获得第3届伦敦国际华语电影节最佳新锐男演员奖。
+        2015年7月，登上杂志《Vogue》。同年发行首张原创制作单曲《Bad Girl》 。年底主演电影《老炮儿》上映，因饰演小爷谭小飞一角进一步受到广泛关注。
+        2016年1月，博柏利160周年，登上博柏利秀场。7月主演电影《原来你还在这里》累计票房3.37亿创同年青春片票房纪录；8月主演电影《夏有乔木》上映，凭此获得日中电影节金鹤奖最佳男主角。11月公布首张英文单曲《JULY》 。
+        2017年2月，主演电影《西游伏妖篇》票房累计突破16亿，吴亦凡在片中饰演男一号唐三藏，同月受邀第59届格莱美颁奖典礼 ；6月，参加综艺节目《中国有嘻哈》；10月，与美国饶舌歌手Travis
+        Scott合作单曲《Deserve》，上线两小时后登上美国iTunes总榜第1位 。
+        2018年5月， 单曲《Like That》登上Billboard Hot 100 第73位，成为首位进入Billboard Hot100单曲榜的华人歌手 ；11月2日，首张专辑《Antares》全球正式发行。
+        2019年8月20日，福布斯中国发布2019名人榜，吴亦凡位列第10。
+    </div>
+    <p>类似网站广告，当我们点击关闭就不见了，但是我们重新刷新页面，会重新出现！</p>
+    <span>本质：让一个元素在页面中隐藏或者显示出来。</span>
+    <h4>overflow 溢出</h4>
+    <p>overflow 属性指定了如果内容溢出一个元素的框(超过其指定高度及宽度)时，会发生什么。</p>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性值</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <th>visible</th>
+            <td>不剪切内容也不添加滚动条</td>
+        </tr>
+        <tr>
+            <th>hidden</th>
+            <td>不显示超过对象尺寸的内容，超出的部分隐藏掉</td>
+        </tr>
+        <tr>
+            <th>scroll</th>
+            <td>不管超出内容与否，总是显示滚动条</td>
+        </tr>
+        <tr>
+            <th>auto</th>
+            <td>超出自动显示滚动条，不超出不显示滚动条</td>
+        </tr>
+    </table>
+    <p>一般情况下，我们都不想让溢出的内容显示出来，因为溢出的部分会影响布局。</p>
+    <p>但是如果有定位的盒子，请慎用overflow：hidden 因为它会隐藏多余的部分。</p>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3过渡多个属性使用</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* transition: width .5s ease 0s, height .5s ease 0s; */
+            /* 如果想要写多个属性，利用逗号进行分割 */
+            /* transition: width .5s, height .5s; */
+            /* 如果想要多个属性都变化，属性写all就可以了 */
+            transition: all 0.5s;
+            /* 谁做过渡，给谁加  */
+        }
+
+        div:hover {
+            width: 400px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

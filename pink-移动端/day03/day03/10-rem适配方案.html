@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem适配方案</title>
+    <style>
+        @media screen and (min-width: 320px) {
+            html {
+                font-size: 21.33px;
+            }
+        }
+
+        @media screen and (min-width: 750px) {
+            html {
+                font-size: 50px;
+            }
+        }
+
+        div {
+            width: 2rem;
+            height: 2rem;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>rem适配方案</h4>
+    <p>我们适配的目标是什么？</p>
+    <p>1.让一些不能等比自适应的元素，达到当设备尺寸发生改变的时候，等比例适配当前设备</p>
+    <p>使用媒体查询根据不同设备按比例设置html的字体大小，然后页面元素使用rem做尺寸单位，当html字体大小变化，元素尺寸也会发生变化，从而达到等比例缩放的适配。</p>
+    <h4>rem实际开发适配方案</h4>
+    <p>1.按照设计稿与设备宽度的比例，动态计算并设置html根标签的font-size 大小;(媒体查询)</p>
+    <p>2.CSS中，设计稿元素的宽、高、相对位置等取值，按照同等比例换算为rem为单位的值;</p>
+    <hr>
+    <br>
+    <h4>rem适配方案技术使用(市场主流)</h4>
+    <ul>
+        技术方案1
+        <li>less</li>
+        <li>媒体查询</li>
+        <li>rem</li>
+    </ul>
+    <ul>
+        技术方案2(推荐)
+        <li>flexible.js</li>
+        <li>rem</li>
+    </ul>
+    <span>总结：</span>
+    <p>两种方案现在都存在</p>
+    <p>方案2更简单，现阶段大家无需了解里面的js代码。</p>
+    <div>1</div>
+    <hr>
+    <br>
+    <h4>rem实际开发适配方案1</h4>
+    <span>rem+媒体查询+less技术</span>
+    <h4>1.设计稿常见尺寸宽度</h4>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>设备</th>
+            <th>常见宽度</th>
+        </tr>
+        <tr>
+            <td>iphone 4.5</td>
+            <td>640px</td>
+        </tr>
+        <tr>
+            <td>iphone 678</td>
+            <td>750px</td>
+        </tr>
+        <tr>
+            <td>Android</td>
+            <td>常见320px、360px、375px、384px、400px、414px、500px、720px 大部分4.7~5寸的安卓设备为720px</td>
+        </tr>
+
+    </table>
+    <p>一般情况下，我们以一套或两套效果图适应大部分的屏幕，放弃极端屏或对其优雅降级，牺牲一些效果，现在基本以750为准。</p>
+    <h4>2.动态设置html标签font-size大小</h4>
+    <p>1.假设设计稿是750px</p>
+    <p>2.假设我们把整个屏幕划分为15等份(划分标准不一可以是20份也可以是10等份)</p>
+    <p>3.每一份作为html字体大小 这里就是50px</p>
+    <p>4.那么在320px设备的时候，字体大小为320/15 就是 21.33px</p>
+    <p>5.用我们页面元素的大小 除以不同的html 字体大会发现他们比例还是相同的</p>
+    <p>6.比如我们以750为标准设计稿</p>
+    <p>7.一个100*100像素的页面元素 在 750屏幕下， 就是 100/50 转换为rem就是 2rem*2rem 比例是 1：1</p>
+    <p>8. 320屏幕下，html字体大小为 21.33 则 2rem = 42.66px 此时宽和高都是42.66 但是 宽和高的比例还是 1：1</p>
+    <p>9.但是已经能实现不同屏幕下 页面元素盒子等比例缩放的效果</p>
+    <h4>3.元素大小取值方法</h4>
+    <p>1.最后的公式：页面元素的rem值 = 页面元素值(px) / (屏幕宽度 / 划分的份数)</p>
+    <p>2.屏幕宽度/划分的份数 就是 html font-size 的大小</p>
+    <p>3.或者： 页面元素的rem值 = 页面元素值(px) / html font-size 字体大小</p>
+</body>
+
+</html>

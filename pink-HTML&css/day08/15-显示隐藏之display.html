@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示隐藏元素之display</title>
+    <style>
+        .peppa {
+            display: none;
+            /* display: block; */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .george {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="peppa">佩奇</div>
+    <div class="george">乔治</div>
+    <p>类似网站广告，当我们点击关闭就不见了，但是我们重新刷新页面，会重新出现！</p>
+    <span>本质：让一个元素在页面中隐藏或者显示出来。</span>
+    <h4>display属性</h4>
+    <p>display属性用于设置一个元素应如何显示</p>
+    <ul>
+        <li>display：none;隐藏对象</li>
+        <li>display：block;除了转换为块级元素之外，同时还有显示元素的意思。</li>
+    </ul>
+    <span>display隐藏元素后，不再占有原来的位置。</span>
+    <p>后面应用及其广泛，搭配JS可以做很多的网页特效</p>
+</body>
+
+</html>

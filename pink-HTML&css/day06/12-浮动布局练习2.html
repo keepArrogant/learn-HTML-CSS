@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动布局练习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1226px;
+            height: 285px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .box li {
+            width: 296px;
+            height: 285px;
+            background-color: purple;
+            float: left;
+            margin-right: 14px;
+        }
+
+        /* 因为第四个盒子靠父盒子最右侧 不需要右外边距 所以要取消掉 */
+        /* .four {
+            margin-right: 0;
+        } */
+        /* 上面的第四个小li的外边距设置无效，因为它的权重为10 .box li 的权重为11 所以上面的权重高 */
+        /* 下面的权重为20 比 .box li的权重11高 优先执行下面的样式 */
+        .box .four {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="four">4</li>
+    </ul>
+</body>
+
+</html>

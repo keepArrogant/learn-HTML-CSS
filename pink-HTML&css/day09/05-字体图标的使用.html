@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标的使用</title>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <style>
+        /* 字体声明 */
+        /* 第一种方式 ，通过unicode引入，把iconfont.woff文件放入项目里面，然后再粘贴下面的代码，span里面通过类名调用就可以了 */
+        /* @font-face {
+            font-family: 'iconfont';
+            src: url('iconfont.eot');
+            src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+                url('iconfont.woff2') format('woff2'),
+                url('iconfont.woff') format('woff'),
+                url('iconfont.ttf') format('truetype'),
+                url('iconfont.svg#iconfont') format('svg');
+        }
+
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        } */
+
+        /* 第二种方式就是通过font-class引入，直接引入iconfont.css样式，标签里面类名调用 */
+        span {
+            font-size: 34px !important;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="iconfont">&#xe6dd;</span>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC端一致，用户不能自行缩放 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <!-- 要求当前网页使用IE浏览器最高版本的内核来渲染 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--[if lt IE 9]>
+        解决IE9以下浏览器对html5新增标签的不识别，并导致CSS不起作用的问题
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        解决ie9以下浏览器对css3 Media Query 的不识别
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  <!-- 一定不要忘记引入bootstrap的样式文件 -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    /* 利用我们自己写的样式覆盖原先的样式 */
+    .login {
+      width: 80px;
+      height: 45px;
+    }
+
+    span {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  123
+  <h4>2.2 Bootstrap 使用</h4>
+  <p>在现阶段我们还没有接触JS相关课程，所以我们只考虑使用它的样式库。</p>
+  <p>控制权在框架本身，使用者要按照框架所规定的某种规范进行开发。</p>
+  <p>Bootstrap 使用四部曲：1.创建文件夹结构 2.创建html 骨架结构 3.引入相关的样式文件 4.书写内容</p>
+  <h5>1.创建文件夹结构</h5>
+  <p>三个文件夹 分别是 bootstrap、css、images 然后bootstrap里面有它自身的css 字体和js 文件</p>
+  <hr>
+  <button type="button" class="btn btn-success login">成功</button>
+  <button type="button" class="btn btn-info">确认</button>
+  <button type="button" class="btn btn-danger">失败</button>
+  <hr>
+  <br>
+  <h4>4.书写内容</h4>
+  <ul>
+    <li>直接拿Bootstrap预先定义好的样式来使用</li>
+    <li>修改Bootstrap原来的样式，注意权重问题</li>
+    <li>学号Bootstrap的关键在于知道它定义了哪些样式，以及这些样式能实现什么样的效果</li>
+  </ul>
+  <div class="container">123</div>
+  <div class="container-fluid">123</div>
+  <h4>2.3 布局容器</h4>
+  <p>Bootstrap 需要为页面内容和栅格系统包裹一个 .container容器，Bootstrap预先定义好了这个类，叫.container 它提供了两个作此用处的类。</p>
+  <span>1.container类</span>
+  <ul>
+    <li>响应式布局的容器 固定宽度</li>
+    <li>大屏(>=1200px) 宽度定为 1170px</li>
+    <li>中屏(>=992px) 宽度定为 970px</li>
+    <li>小屏(>=768px) 宽度定为 750px</li>
+    <li>超小屏(100%)</li>
+  </ul>
+  <span>2. container-fluid 类</span>
+  <ul>
+    <li>流式布局容器 百分百宽度</li>
+    <li>占据全部视口(viewport)的容器</li>
+    <li>适合于单独做移动端开发</li>
+  </ul>
+</body>
+
+</html>

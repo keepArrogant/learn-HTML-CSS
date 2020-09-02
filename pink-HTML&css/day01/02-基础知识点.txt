@@ -1,0 +1,5 @@
+W3C规范必须遵循
+
+html是结构
+css是表现
+JavaScript是行为

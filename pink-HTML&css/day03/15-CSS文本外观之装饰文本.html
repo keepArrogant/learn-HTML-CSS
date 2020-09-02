@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本外观之装饰文本</title>
+    <style>
+        div {
+            /* 下划线 */
+            /* text-decoration: underline; */
+            /* 删除线 */
+            /* text-decoration: line-through; */
+            /* 上划线 */
+            text-decoration: overline;
+        }
+        a {
+            /* 取消a默认的下划线 */
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div>粉红色的回忆</div>
+    <a href="#">一般a标签下都有下划线</a>
+    <p>none 默认。没有装饰线(最常用)</p>
+    <p>underline 下划线。链接a自带下划线(常用)</p>
+    <p>overline上划线(几乎不用)</p>
+    <p>line-through 删除线(不常用)</p>
+</body>
+</html>

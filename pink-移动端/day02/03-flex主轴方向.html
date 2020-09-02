@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex主轴方向</title>
+    <style>
+        div {
+            /* 给父级添加flex属性 */
+            display: flex;
+            width: 800px;
+            height: 300px;
+            background-color: pink;
+            /* 默认的主轴是x轴 行 row 那么y轴就是侧轴咯 */
+            /* 我们的元素是跟着主轴来排列的 */
+            /* flex-direction: row; */
+            /* 简单了解 翻转 */
+            /* flex-direction: row-reverse; */
+            /* 我们可以把我们的主轴设置为y轴 那么 x轴就成了侧轴 */
+            flex-direction: column;
+        }
+
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <hr>
+    <br>
+    <h4>常见父项属性</h4>
+    <span>以下由6个属性时对父元素设置的</span>
+    <ul>
+        <li>flex-direction:设置主轴的方向</li>
+        <li>justify-content:设置主轴上的子元素排列方式</li>
+        <li>flex-wrap:设置子元素是否换行</li>
+        <li>align-content:设置侧轴上的子元素的排列方式(多行)</li>
+        <li>align-items:设置侧轴上的子元素排列方式(单行)</li>
+        <li>flex-flow:复合属性，相当于同时设置了flex-direction和flex-wrap</li>
+    </ul>
+    <br>
+    <h3>flex-direction设置主轴的方向</h3>
+    <h4>1.主轴与侧轴</h4>
+    <span>在flex布局中，是分为主轴和侧轴两个方向，同样的叫法有：行和列、x轴和y轴</span>
+    <ul>
+        <li>默认主轴方向就是x轴方向，水平向右</li>
+        <li>默认侧轴方向就是y轴方向，水平向下</li>
+    </ul>
+    <h4>2.属性值</h4>
+    <p>flex-direction属性决定主轴的方向(即项目的排列方向)</p>
+    <p>注意：主轴和侧轴是会变化的，就看flex-direction设置谁为主轴，剩下的就是侧轴。而我们的子元素是跟着主轴来排列的。</p>
+    <br>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性值</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>row</td>
+            <td>默认值从左到右</td>
+        </tr>
+        <tr>
+            <td>row-reverse</td>
+            <td>从右到左</td>
+        </tr>
+        <tr>
+            <td>column</td>
+            <td>从上到下</td>
+        </tr>
+        <tr>
+            <td>column-reverse</td>
+            <td>从下到上</td>
+        </tr>
+    </table>
+</body>
+
+</html>

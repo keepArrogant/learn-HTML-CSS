@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emmet语法使用</title>
+</head>
+
+<body>
+    <h4>快速生成HTML结构语法</h4>
+    <p>1.生成标签之间输入标签名按tab键即可 比如div然后tab键，就可以生成div标签</p>
+    <p>2.如果想要生成多个相同标签，加上*就可以了 比如 div*3 就可以快速生成3个div</p>
+    <p>3.如果有父子级关系的标签，可以用> 比如 ul>li就可以生成ul包含li的标签</p>
+    <p>4.如果有兄弟关系的标签，用+就可以了 比如div+p生成 div和p同级的标签</p>
+    <p>5.如果生成带有类名或者id名字的，之间写.demo或者#two tab键就可以了</p>
+    <p>6.如果生成的div类名是有顺序的，可以用自增符号$</p>
+    <p>7.如果想要在生成的标签内部写内容可以用{}表示</p>
+    <hr>
+    <!-- div*10 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- ul>li -->
+    <ul>
+        <li></li>
+    </ul>
+    <!-- div+p -->
+    <div></div>
+    <p></p>
+    <!-- .nav -->
+    <div class="nav"></div>
+    <!-- #banner -->
+    <div id="banner"></div>
+    <!-- p.one -->
+    <p class="one"></p>
+    <!-- span.gray -->
+    <span class="gray"></span>
+    <!-- ul>li#two -->
+    <ul>
+        <li id="two"></li>
+    </ul>
+    <!-- .demo$*5 -->
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+    我们想生成的标签里面默认显示几个文字
+    <!-- div{哈哈哈哈} -->
+    <div>哈哈哈哈</div>
+    <!-- div{好好学习，天天上网}*5 -->
+    <div>好好学习，天天上网</div>
+    <div>好好学习，天天上网</div>
+    <div>好好学习，天天上网</div>
+    <div>好好学习，天天上网</div>
+    <div>好好学习，天天上网</div>
+    <!-- div{$}*5 -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</body>
+
+</html>

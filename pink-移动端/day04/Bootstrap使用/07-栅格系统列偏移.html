@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>栅格系统列偏移</title>
+    <style>
+        .row>div {
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">左侧</div>
+            <!-- 偏移的份数 就是 12 - 两个盒子的份数 = 6 -->
+            <div class="col-md-3 col-md-offset-6">右侧</div>
+        </div>
+        <div class="row">
+            <!-- 如果只有一个盒子，想要居中显示 就偏移 （12- 自己的份数）/2 -->
+            <div class="col-md-8 col-md-offset-2">中间盒子</div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <h4>3.4 列偏移</h4>
+    <p>使用 .col-md-offset-* 类可以将列向右侧偏移。 这些类实际是通过使用*选择器为当前元素增加了左侧的边距(margin)</p>
+</body>
+
+</html>

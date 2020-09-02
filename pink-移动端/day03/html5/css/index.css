@@ -1,0 +1,77 @@
+body {
+    min-width: 320px;
+    max-width: 750px;
+    /* 引入的 flexible js文件把宽度划分成了十等份，html的文字大小为宽度的十分之一，那么宽度要设置为10份的总和 也就是10rem */
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #F2F2F2;
+}
+
+a {
+    text-decoration: none;
+    font-size: .333333rem;
+}
+
+/* 在该方法下制作不用less 所以为了px和rem转换计算 我们在VSCode 里面 装插件 cssrem  */
+
+/* 它默认html： font-size：16px   在设置里面 把 16px 改为 75px 就好了 */
+
+/* 因为引入的是js文件，它把屏幕的宽度划分成了10等份 但是我们是做移动端的，最高的宽度应该为750px，所以必须限定一下 */
+
+@media screen and (min-width: 750px) {
+    html {
+        /* 因为该js文件是吧屏幕宽度划分为10等份 所以 750/10 = 75 */
+        /* 而且要把它的权重设置为最高，不然js会覆盖掉 */
+        font-size: 75px!important;
+    }
+}
+
+/* 搜索头 */
+
+.search-content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 10rem;
+    height: 1.173333rem;
+    background-color: #FFC001;
+}
+
+.classify {
+    width: .586667rem;
+    height: 0.933333rem;
+    margin: .146667rem .333333rem .133333rem;
+    background: url(../images/classify.png) no-repeat;
+    background-size: .586667rem .933333rem;
+}
+
+.search {
+    flex: 1;
+}
+
+.search input {
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: 0.88rem;
+    font-size: .333333rem;
+    background-color: #FFF2CC;
+    margin-top: .133333rem;
+    border-radius: .44rem;
+    color: #757575;
+    padding-left: .733333rem;
+}
+
+.login {
+    width: 1rem;
+    height: .933333rem;
+    line-height: .933333rem;
+    margin: .133333rem;
+    color: #fff;
+    text-align: center;
+    font-size: .333333rem;
+}

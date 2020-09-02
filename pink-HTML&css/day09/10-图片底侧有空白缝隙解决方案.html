@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片底侧有空白缝隙解决方案</title>
+    <style>
+        div {
+            border: 2px solid red;
+        }
+
+        img {
+            vertical-align: middle;
+            /* display: block; */
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="timg.jpg" alt="">
+    </div>
+    <p>bug:图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐。</p>
+    <h5>主要的解决办法：</h5>
+    <p>1.给图片添加<span> vertical-align:middle|top|bottom</span>等(提倡使用)</p>
+    <p>2.把图片转换为块级元素<span>display:block;</span></p>
+</body>
+
+</html>

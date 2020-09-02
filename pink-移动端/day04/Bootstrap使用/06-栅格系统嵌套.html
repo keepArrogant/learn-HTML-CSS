@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栅格系统嵌套</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .row>div {
+            height: 50px;
+            background-color: pink;
+            /* 本来就有内边距，划分的等份也是百分比，如果加外边距就会掉下来 */
+            /* margin: 0 10px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- 我们列嵌套最好加一个行 row 这样可以取消父元素的padding值 而且高度自动和父级一样高 -->
+                <div class="row">
+                    <div class="col-md-4">a</div>
+                    <div class="col-md-8">b</div>
+                </div>
+            </div>
+            <div class="col-md-4">2</div>
+            <div class="col-md-4">3</div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <h4>3.3 列嵌套</h4>
+    <p>栅格系统内置的栅格系统将内容再次嵌套。简单理解就是一个列内再分成若干份小列。我们可以通过添加一个新的 .row 元素和一些列 .col-sm-* 元素到已经存在的 .col-sm-* 元素内。</p>
+    <p>我们列嵌套最好加一个行 row 这样可以取消父元素的padding值 而且高度自动和父级一样高</p>
+    <!-- 列嵌套 -->
+    <div class="col-sm-4">
+        <div class="row">
+            <div class="col-sm-6">小列</div>
+            <div class="col-sm-6">小列</div>
+        </div>
+    </div>
+</body>
+
+</html>

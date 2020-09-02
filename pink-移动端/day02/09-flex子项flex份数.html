@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex子项flex份数</title>
+    <style>
+        section {
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        /* 为了实现左右固定，中间盒子可以自由伸缩 */
+        section div:nth-child(1) {
+            width: 100px;
+            height: 150px;
+            background-color: red;
+        }
+
+        section div:nth-child(2) {
+            flex: 1;
+            background-color: springgreen;
+        }
+
+        section div:nth-child(3) {
+            width: 100px;
+            height: 150px;
+            background-color: skyblue;
+        }
+
+        p {
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        /* 子盒子没有给大小，但是始终二号盒子占两份宽度  */
+        p span {
+            flex: 1;
+        }
+
+        p span:nth-child(2) {
+
+            flex: 2;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <p>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </p>
+    <hr>
+    <br>
+    <h4>flex属性</h4>
+    <span>flex属性定义子项目分配剩余空间，用flex来表示占多少份数-----</span>
+    <span>.item{flex: 数值; 填0也可以}</span>
+</body>
+
+</html>

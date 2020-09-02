@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-wrap子元素是否换行</title>
+    <style>
+        div {
+            display: flex;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            /* flex布局中，默认的子元素是不换行的，如果装不开，会缩小子元素的宽度，放到父元素里面 */
+            /* flex-wrap: nowrap; */
+            flex-wrap: wrap;
+        }
+
+        div span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            color: #fff;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <hr>
+    <br>
+    <h4>flex-wrap设置子元素是否换行</h4>
+    <p>默认情况下，项目都排在一条线(又称“轴线”)上。flex-wrap属性定义，flex布局中默认是不换行的。</p>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th>属性值</th>
+            <th>说明</th>
+        </tr>
+        <tr>
+            <td>nowrap</td>
+            <td>默认值，不换行</td>
+        </tr>
+        <tr>
+            <td>wrap</td>
+            <td>换行</td>
+        </tr>
+    </table>
+</body>
+
+</html>

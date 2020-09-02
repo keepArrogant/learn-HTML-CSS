@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单域(了解)</title>
+</head>
+<body>
+    <h4>表单的组成</h4>
+    <p>在html中，一个完整的表单通常由表单域、表单控件(也称为表单元素)和提示信息3个部分组成</p>
+    <h4>表单域</h4>
+    <p>表单域是一个包含表单元素的区域</p>
+    <p>在html标签中，form标签用于定义表单域，以实现用户信息的收集和传递</p>
+    <p>form会吧它范围内的表单元素信息提交给服务器</p>
+    <h4>常用属性</h4>
+    <table width="600" border="1" cellspacing="0">
+        <tr>
+            <th>属性</th>
+            <th>属性值</th>
+            <th>作用</th>
+        </tr>
+        <tr>
+            <td>action</td>
+            <td>url地址</td>
+            <td>用于指定接收并处理表单数据的服务器程序的url地址</td>
+        </tr>
+        <tr>
+            <td>method</td>
+            <td>get/post</td>
+            <td>用于设置表单数据的提交方式，其取值为get或post</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>名称</td>
+            <td>用于指定表单的名称，以区分同一个页面中的多个表单域</td>
+        </tr>
+    </table>
+    <p>1.在我们写表单元素之前，应该有个表单域把他们进行包含</p>
+    <p>2.表单域是form标签</p>
+    <form action="demo.php" method="POST" name="name1">
+
+    </form>
+</body>
+</html>

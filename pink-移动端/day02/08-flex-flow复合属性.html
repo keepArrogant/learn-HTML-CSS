@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-flow复合属性</title>
+    <style>
+        div {
+            display: flex;
+            width: 600px;
+            height: 300px;
+            background-color: pink;
+            /* flex-direction: column;
+            flex-wrap: wrap; */
+            /* 把设置主轴方向和是否换行(换列) 简写 */
+            flex-flow: column wrap;
+
+        }
+
+        span {
+            width: 150px;
+            height: 100px;
+            color: #fff;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+    </div>
+    <hr>
+    <br>
+    <h4>flex-flow</h4>
+    <p>flex-flow属性时flex-direction和flex-warp属性的复合属性</p>
+    <span>flex-flow:row wrap;</span>
+    <ul>
+        <li>flex-direction：设置主轴的方向</li>
+        <li>justify-content：设置主轴上的子元素排列方式</li>
+        <li>flex-wrap：设置子元素是否换行</li>
+        <li>align-content：设置侧轴上的子元素的排列方式(多行)</li>
+        <li>align-items：设置侧轴上的子元素排列方式(单行)</li>
+        <li>flex-flow：复合属性，相当于同时设置了flex-direction和flex-wrap</li>
+    </ul>
+</body>
+
+</html>
